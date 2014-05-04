@@ -28,5 +28,11 @@ customer_database.push(dave)
 puts customer_database
 
 # Creating new customers and add them to the database
+def user_input
+puts "Please enter a new name"
+gets.chomp = user_input
+
 puts "Please enter a new name and address to add to the database. Example: ''Dave'', ''123 Main''"
+gets.chomp = Customer.new
+
 
