@@ -29,10 +29,10 @@ end
 
 grun_pea = gene.new("G", "G")
 geld_pea = gene.new("y", "y")
+kind_pea = gene.new(grun_pea.pri, geld_pea.pri)
 
 puts "Green Pea: #{grun_pea.pair}"
 puts "Yellow Pea: #{geld_pea.pair}"
 
-kind_pea =gene.new(grun_pea.pri, geld_pea.pri)
 puts "Child Pea: #{kind_pea.pair}"
 puts "---"
