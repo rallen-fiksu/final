@@ -4,4 +4,6 @@
 
 # Get even number from user.
 
-def number_of_people 
+puts "Please enter a positive number between 2 and 10."
+people = gets.chomp 
+puts "You typed #{people}."
