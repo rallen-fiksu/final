@@ -27,7 +27,5 @@ class Person
 	end
 end
 
-p = guy1.new('Thorpe', 'Male', '1')
-puts "#{p.name}"
-puts "#{p.gender}"
-puts "#{p.number}"
+p = Person.new('Thorpe', 'Male', '1')
+puts "#{p}"
