@@ -4,6 +4,10 @@
 
 # Get even number from user.
 
-puts "Please enter a positive number between 2 and 10."
-people = gets.chomp 
-puts "You typed #{people}."
+# puts "Please enter a positive number between 2 and 10."
+# people = gets.chomp.to_i
+begin
+	puts "Please enter a positive number between 2 and 10."
+	people = gets.chomp.to_i
+end while (people < 1 || people > 10) && (people % 2 != 0)
+puts "You typed: #{people}."
