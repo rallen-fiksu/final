@@ -16,23 +16,29 @@ puts "You typed: #{people}."
 # for testing purposes, we'll have each person be given a number which are added together in each new person.
 
 # Person as class
+# Realize now I have issues with this class because I'm reading older docs.
 class Person
+	# attr_accessor is used so we can read/write :name, etc...
 	attr_accessor :name, :gender, :number
 
-	def initialize(opts = {})
-		@name = opts[:name]
-		@gender = opts[:gender]
-		@number = opts[:number]
+	def initialize (name, gender, number)
+		@name = name
+		@gender = gender
+		@number = number
 	end
 
 	def id
-		puts "Hi! My name is #{name} and I am #{gender}. My number is #{number}"
+		puts "Hi! My name is #{name} and I am #{gender}. My number is #{number}."
 	end
 end
 
 man = Person.new("Thorpe", "Male", 1)
-man_n = man.number
-puts man_n
+puts "#{man}"
+puts "#{man.name}"
+puts "#{man.gender}"
+puts "#{man.number}"
+puts "#{man.id}"
+
 =begin
 woman = Person.new('Jain', 'Female', '1')
 woman_n = woman.number
