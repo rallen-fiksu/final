@@ -30,14 +30,17 @@ class Person
 	def id
 		puts "Hi! My name is #{name} and I am #{gender}. My number is #{number}."
 	end
+
+	def my_num
+		number.to_i
+		return my_num
+	end
 end
 
 man = Person.new("Thorpe", "Male", 1)
-puts "#{man}"
-puts "#{man.name}"
-puts "#{man.gender}"
-puts "#{man.number}"
-puts "#{man.id}"
+woman = Person.new("Jain", "Female", 1)
+child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
+puts "Child number is #{child.number}."
 
 =begin
 woman = Person.new('Jain', 'Female', '1')
