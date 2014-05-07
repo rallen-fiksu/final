@@ -36,6 +36,15 @@ class Person
 		number.to_i
 		return my_num
 	end
+
+  	def self.all
+    	ObjectSpace.each_object(self).to_a
+  	end
+
+  	def self.count
+    	all.count
+  	end
+
 end
 
 # Sanity check
@@ -47,30 +56,25 @@ puts "Child number is #{child.number}."
 # loop creates people and stores them in an array, sorted by males and females.
 # THEN, a custom method pairs off males and females to make half as many people, m/f 50/50 until only 1.
 
-=begin
-# Make people based on user input
-population = Array.new
-i = 0
-while i < people do
-	$human{i} = Person.new("Human #{i}", "Male", 1)
-	population << $human
-	i += 1
-end
-puts human.each
-=end
-
 # Okay lets try this. Use people to create a array with population[people]. Then, run each through person.
 population = Array.new
 
+# Fill array
 1.upto(people) do |i|
-	population << "Human #{i}"  
+	population << "Human_#{i}"  
+end
+
+# MAKE PEOPLE
+population.each do |population|
+	population = Person.new("#{population}", "Male", 1)
 end
 
 # Sanity Check. Delete this out later.
 population.each do |population|
 	puts population
 end
-
+puts ObjectSpace.each_object(Person).count
+puts "#{Human_1}"
 
 
 =begin
