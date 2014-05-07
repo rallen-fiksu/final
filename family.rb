@@ -47,6 +47,7 @@ puts "Child number is #{child.number}."
 # loop creates people and stores them in an array, sorted by males and females.
 # THEN, a custom method pairs off males and females to make half as many people, m/f 50/50 until only 1.
 
+=begin
 # Make people based on user input
 population = Array.new
 i = 0
@@ -56,13 +57,20 @@ while i < people do
 	i += 1
 end
 puts human.each
+=end
 
 # Okay lets try this. Use people to create a array with population[people]. Then, run each through person.
 population = Array.new
 
 1.upto(people) do |i|
-  
+	population << "Human #{i}"  
 end
+
+# Sanity Check. Delete this out later.
+population.each do |population|
+	puts population
+end
+
 
 
 =begin
