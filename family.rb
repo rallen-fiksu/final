@@ -1,11 +1,8 @@
 #!/usr/bin/ruby
 # Family Tree - Genetic Pair swapping
-# This script defines an even number of people, and has them pair off until there is one person.
+# This program defines an even number of people, and has them pair off until there is one person.
 
 # Get even number from user.
-
-# puts "Please enter a positive number between 2 and 10."
-# people = gets.chomp.to_i
 begin
 	puts "Please enter a positive number between 2 and 10."
 	people = gets.chomp.to_i
@@ -15,8 +12,6 @@ puts "You typed: #{people}."
 # people tells program how many people to start with in the first generation.
 # for testing purposes, we'll have each person be given a number which are added together in each new person.
 
-# Person as class
-# Realize now I have issues with this class because I'm reading older docs.
 class Person
 	# attr_accessor is used so we can read/write :name, etc...
 	attr_accessor :name, :gender, :number
@@ -53,18 +48,19 @@ woman = Person.new("Jain", "Female", 1)
 child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 
-# loop creates people and stores them in an array, sorted by males and females.
+# loop creates people and stores them in an array.
 # THEN, a custom method pairs off males and females to make half as many people, m/f 50/50 until only 1.
 
-# Okay lets try this. Use people to create a array with population[people]. Then, run each through person.
+# Okay lets try this. Use people to create a array with population[people].
 population = Array.new
 
 # Fill array
 1.upto(people) do |i|
-	population << "Human_#{i}"  
+	population << "human_#{i}"  
 end
 
 # MAKE PEOPLE
+puts "Making people..."
 population.each do |population|
 	population = Person.new("#{population}", "Male", 1)
 end
@@ -73,9 +69,10 @@ end
 population.each do |population|
 	puts population
 end
+print "Number of Humans: "
 puts ObjectSpace.each_object(Person).count
-puts "#{Human_1}"
 
+puts human_1
 
 =begin
 TO DO
