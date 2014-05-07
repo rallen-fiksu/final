@@ -54,15 +54,9 @@ puts "Child number is #{child.number}."
 # Okay lets try this. Use people to create a array with population[people].
 population = Array.new
 
-# Fill array
+# Fill array with Persons
 1.upto(people) do |i|
-	population << "human_#{i}"  
-end
-
-# MAKE PEOPLE
-puts "Making people..."
-population.each do |population|
-	population = Person.new("#{population}", "Male", 1)
+	population << Person.new("human_#{i}", "Male", 1)
 end
 
 # Sanity Check. Delete this out later.
