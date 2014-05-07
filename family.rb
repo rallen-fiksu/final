@@ -25,6 +25,7 @@ class Person
 		@name = name
 		@gender = gender
 		@number = number
+		# Number is a stand in for the more complicated genes.
 	end
 
 	def id
@@ -37,14 +38,21 @@ class Person
 	end
 end
 
+# Sanity check
 man = Person.new("Thorpe", "Male", 1)
 woman = Person.new("Jain", "Female", 1)
 child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 
+# loop creates people and stores them in an array, sorted by males and females.
+# THEN, a custom method pairs off males and females to make half as many people, m/f 50/50 until only 1.
+
+# Make people based on user input
+population = Array.new
 i = 0
 while i < people do
-	$human[i] = Person.new("Human #{i}", "Male", 1)
+	$human = Person.new("Human #{i}", "Male", 1)
+	population << $human
 	i += 1
 end
 puts human.each
