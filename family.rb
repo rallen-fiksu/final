@@ -42,29 +42,19 @@ woman = Person.new("Jain", "Female", 1)
 child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 
-=begin
-woman = Person.new('Jain', 'Female', '1')
-woman_n = woman.number
-puts woman_n
-child = Person.new('kid1', 'Male', '1')
-puts "#{child}"
-=end
-
-=begin
-#Person as Struct
-Person = Struct.new(:name, :gender, :number) do
-  def id
-    puts "Hi! My name is #{name} and I am #{gender}. My number is #{number}"
-  end
+i = 0
+while i < people do
+	human[i] = Person.new("Human"i, "Male", 1)
+	i += 1
 end
+puts human.each
 
-man = Person.new('Thorpe', 'Male', '1')
-man_n = man.number
-puts man_n
-woman = Person.new('Jain', 'Female', '1')
-woman_n = woman.number
-puts woman_n
-child = Person.new('kid1', 'Male', '1')
-puts "#{child}"
 
+
+
+=begin
+TO DO
+-Generate random people based on number inputted by user.
+-Have said random people pair off to produce more people.
+-Have gene's pair off instead of numbers
 =end
