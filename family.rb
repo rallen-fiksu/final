@@ -51,13 +51,18 @@ puts "Child number is #{child.number}."
 population = Array.new
 i = 0
 while i < people do
-	$human = Person.new("Human #{i}", "Male", 1)
+	$human{i} = Person.new("Human #{i}", "Male", 1)
 	population << $human
 	i += 1
 end
 puts human.each
 
+# Okay lets try this. Use people to create a array with population[people]. Then, run each through person.
+population = Array.new
 
+1.upto(people) do |i|
+  
+end
 
 
 =begin
