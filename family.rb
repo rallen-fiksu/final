@@ -44,7 +44,7 @@ puts "Child number is #{child.number}."
 
 i = 0
 while i < people do
-	human[i] = Person.new("Human"i, "Male", 1)
+	$human[i] = Person.new("Human #{i}", "Male", 1)
 	i += 1
 end
 puts human.each
