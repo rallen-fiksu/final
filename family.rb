@@ -56,8 +56,8 @@ population = Array.new
 
 # Fill array with Persons
 1.upto(people) do |i|
-	human_i = Person.new("human", "Male", 1)
-	population << "human_#{i}"
+	i = Person.new("human", "Male", 1)
+	population << i
 end
 
 # Sanity Check. Delete this out later.
@@ -66,8 +66,6 @@ population.each do |population|
 end
 print "Number of Humans: "
 puts ObjectSpace.each_object(Person).count
-
-puts human_1
 
 =begin
 TO DO
