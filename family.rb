@@ -56,7 +56,8 @@ population = Array.new
 
 # Fill array with Persons
 1.upto(people) do |i|
-	population << Person.new("human_#{i}", "Male", 1)
+	human_i = Person.new("human", "Male", 1)
+	population << "human_#{i}"
 end
 
 # Sanity Check. Delete this out later.
