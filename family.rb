@@ -67,6 +67,12 @@ end
 puts "---"
 puts population
 
+population.each do
+	population = Person.new("Thorpe", "Male", 1)
+end
+puts "***"
+puts population
+
 =begin
 rescue Exception => e
 	
