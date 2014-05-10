@@ -55,7 +55,6 @@ puts "***"
 
 # Create Persons
 x = 0
-puts x
 1.upto(people) do |i|
 	if x % 2 == 0 
 		i = Person.new("human_#{i}", "Male", 1)
