@@ -16,6 +16,7 @@ class Person
 	# attr_accessor is used so we can read/write :name, etc...
 	attr_accessor :name, :gender, :number
 
+	# Define biographical and genetic information
 	def initialize (name, gender, number)
 		@name = name
 		@gender = gender
@@ -23,15 +24,18 @@ class Person
 		# Number is a stand in for the more complicated genes.
 	end
 
+	# Sanity check to output said information
 	def id
 		puts "Hi! My name is #{name} and I am #{gender}. My number is #{number}."
 	end
 
+	# convert number to an integer
 	def my_num
 		number.to_i
 		return my_num
 	end
 
+	# List how many objects exist
   	def self.all
     	ObjectSpace.each_object(self).to_a
   	end
@@ -54,6 +58,18 @@ puts "Child number is #{child.number}."
 # Okay lets try this. Use people to create a array with population[people].
 population = Array.new
 
+people.times do
+	puts "gimme a name"
+	str = gets.chomp 
+	population.push
+end
+
+puts population
+
+=begin
+rescue Exception => e
+	
+end
 # Fill array with Persons
 1.upto(people) do |i|
 	i = Person.new("human", "Male", 1)
@@ -66,6 +82,8 @@ population.each do |population|
 end
 print "Number of Humans: "
 puts ObjectSpace.each_object(Person).count
+=end
+
 
 =begin
 TO DO
