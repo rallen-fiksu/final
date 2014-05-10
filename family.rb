@@ -64,9 +64,7 @@ puts x
 		i = Person.new("human_#{i}", "Female", 1)
 		x += 1
 	end
-	puts i.name
-	puts i.gender
-	puts x
+	puts i.id
 end
 
 
