@@ -51,11 +51,15 @@ man = Person.new("Thorpe", "Male", 1)
 woman = Person.new("Jain", "Female", 1)
 child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
-
+puts "***"
 # Create Persons
 1.upto(people) do |i|
 	i = Person.new("human_#{i}", "Male", 1)
+	couple_i = Array.new
+	couple_i << i
 	puts i.name
+	puts "---"
+	puts couple_i
 end
 
 
