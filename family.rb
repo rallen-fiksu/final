@@ -55,17 +55,18 @@ puts "***"
 
 # Create Persons
 x = 2
+puts x
 1.upto(people) do |i|
-	while x % 2 == 0 do
+	if x % 2 == 0 
 		i = Person.new("human_#{i}", "Male", 1)
-		x += 1
-	end
-	while x % 2 == 1 do
+		x + 1
+	else
 		i = Person.new("human_#{i}", "Female", 1)
-		x += 1
+		x + 1
 	end
 	puts i.name
 	puts i.gender
+	puts x
 end
 
 
