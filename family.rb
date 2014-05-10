@@ -58,12 +58,13 @@ puts "Child number is #{child.number}."
 # Okay lets try this. Use people to create a array with population[people].
 population = Array.new
 
+# Get name from user, add to an array
 people.times do
 	puts "gimme a name"
-	str = gets.chomp 
-	population.push
+	user_name = gets.chomp 
+	population.push(user_name)
 end
-
+puts "---"
 puts population
 
 =begin
