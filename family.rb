@@ -53,9 +53,9 @@ child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 
 # Create Persons
-0.upto(people) do |i|
-	i = Person.new("human", "Male", 1)
-	puts i
+1.upto(people) do |i|
+	i = Person.new("human_#{i}", "Male", 1)
+	puts i.name
 end
 
 
