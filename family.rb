@@ -54,7 +54,7 @@ puts "Child number is #{child.number}."
 puts "***"
 
 # Create Persons
-x = 2
+x = 0
 puts x
 1.upto(people) do |i|
 	if x % 2 == 0 
@@ -70,57 +70,3 @@ puts x
 end
 
 
-
-
-
-
-
-
-
-=begin
-# loop creates people and stores them in an array.
-# THEN, a custom method pairs off males and females to make half as many people, m/f 50/50 until only 1.
-
-# Okay lets try this. Use people to create a array with population[people].
-population = Array.new
-
-# Get name from user, add to an array
-people.times do
-	puts "gimme a name"
-	user_name = gets.chomp 
-	population.push(user_name)
-end
-puts "---"
-puts population
-
-population.each do
-	population = Person.new("Thorpe", "Male", 1)
-end
-puts "***"
-puts population
-
-
-rescue Exception => e
-	
-end
-# Fill array with Persons
-1.upto(people) do |i|
-	i = Person.new("human", "Male", 1)
-	population << i
-end
-
-# Sanity Check. Delete this out later.
-population.each do |population|
-	puts population
-end
-print "Number of Humans: "
-puts ObjectSpace.each_object(Person).count
-=end
-
-
-=begin
-TO DO
--Generate random people based on number inputted by user.
--Have said random people pair off to produce more people.
--Have gene's pair off instead of numbers
-=end
