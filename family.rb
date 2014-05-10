@@ -52,6 +52,21 @@ woman = Person.new("Jain", "Female", 1)
 child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 
+# Create Persons
+0.upto(people) do |i|
+	i = Person.new("human", "Male", 1)
+	puts i
+end
+
+
+
+
+
+
+
+
+
+=begin
 # loop creates people and stores them in an array.
 # THEN, a custom method pairs off males and females to make half as many people, m/f 50/50 until only 1.
 
@@ -73,7 +88,7 @@ end
 puts "***"
 puts population
 
-=begin
+
 rescue Exception => e
 	
 end
