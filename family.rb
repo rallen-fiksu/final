@@ -53,6 +53,7 @@ child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 puts "***"
 
+=begin
 # Create Persons in Generation 1
 x = 0
 1.upto(people) do |i|
@@ -71,8 +72,10 @@ generation1 = Array.new(people/2)
 1.upto(people/2) do |i|
 	couple i
 end
+=end
 
 # Create a hash for each generation, and store the couple arrays in the hash.
 # Suppose to dynamically create something like this:
 # gen1 = {couple1 => [man1, woman1], couple2 => [man2, woman2]}
+generation1 = Hash.new { |h,k| h[k] = Array.new}
 
