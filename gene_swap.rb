@@ -39,21 +39,21 @@ end
 # Super helpful link on Class Objects: http://patshaughnessy.net/2012/7/26/objects-classes-and-modules
 
 # Sanity check
-man = Person.new("Thorpe", "Male", 1)
-woman = Person.new("Jain", "Female", 1)
+man1 = Person.new("Thorpe", "Male", 1)
+woman1 = Person.new("Jain", "Female", 1)
+man2 = Person.new("Thorpe", "Male", 1)
+woman2 = Person.new("Jain", "Female", 1)
 # child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 # puts "Child number is #{child.number}."
 puts "***"
 
-couple1 = [man, woman]
 generation1 = Hash.new
-generation1 = {:couple => [man, woman]}
+generation1 = {:couple1 => [man1, woman1], :couple2 => [man2, woman2]}
 
 puts "Generation 1:"
 generation1.each { |a| puts a }
-puts "Couple Number 1:"
-couple1.each { |a| puts a }
+
 puts "---"
 # Make Babies!
-child = Person.new("Dimmy", "Male", man.number.to_i + woman.number.to_i)
-puts child.id
+# child = Person.new("Dimmy", "Male", man1.number.to_i + woman1.number.to_i)
+# puts child.id
