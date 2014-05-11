@@ -45,9 +45,9 @@ woman = Person.new("Jain", "Female", 1)
 # puts "Child number is #{child.number}."
 puts "***"
 
-generation1 = Array.new
 couple1 = [man, woman]
-generation1.push(couple1)
+generation1 = Hash.new
+generation1 = {:couple => [man, woman]}
 
 puts "Generation 1:"
 generation1.each { |a| puts a }
