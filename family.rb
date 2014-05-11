@@ -53,7 +53,7 @@ child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 puts "Child number is #{child.number}."
 puts "***"
 
-# Create Persons
+# Create Persons in Generation 1
 x = 0
 1.upto(people) do |i|
 	if x % 2 == 0 
@@ -66,4 +66,12 @@ x = 0
 	puts i.id
 end
 
+# Make Couples in Generation 1
+generation1 = Array.new(people/2)
+1.upto(people/2) do |i|
+	couple i
+end
+
+# Make new people from couples!
+# 1.upto(people) do |i|
 
