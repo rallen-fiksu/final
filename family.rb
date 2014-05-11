@@ -72,6 +72,7 @@ generation1 = Array.new(people/2)
 	couple i
 end
 
-# Make new people from couples!
-# 1.upto(people) do |i|
+# Create a hash for each generation, and store the couple arrays in the hash.
+# Suppose to dynamically create something like this:
+# gen1 = {couple1 => [man1, woman1], couple2 => [man2, woman2]}
 
