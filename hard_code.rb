@@ -10,8 +10,7 @@ class Person
 	def initialize (name, gender, gene)
 		@name = name
 		@gender = gender
-		@pair = gene
-		# Number is a stand in for the more complicated genes.
+		@gene = gene
 	end
 
 	# Sanity check to output said information
