@@ -28,12 +28,12 @@ man_b1 = Person.new("Rolb", "Male", 1)
 woman_b1 = Person.new("Fess", "Female", 1)
 
 # Generation 2
-generation2 = {:couple1 => [man_a2, woman_a2]
+generation2 = {:couple1 => [man_a2, woman_a2]}
 man_a2 = Person.new("Durn", "Male", man_a1.number.to_i + woman_a1.number.to_i)
 woman_a2 = Person.new("Lok", "Female", man_b1.number.to_i + woman_b1.number.to_i)
 
 # Generation 3
-generation2 = {:individual => [man_a3]
+generation2 = {:individual => [man_a3]}
 man_a3 = Person.new("Wince", "Male", man_a2.number.to_i + woman_a2.number.to_i)
 
 # Sanity check
