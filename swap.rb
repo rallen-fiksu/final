@@ -30,3 +30,7 @@ print "Father: "
 puts man1.id
 print "Mother: "
 puts woman1.id
+
+puts man1.pair[0,1]
+
+# child1= Gpair.new()
