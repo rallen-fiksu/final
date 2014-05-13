@@ -14,15 +14,6 @@ class Gpair
 	end
 end
 
-def swap(a)
-  	flip = 1 + rand(2)
-    if flip == 2 
-       	puts a[1,1]
-   	else
-       	puts a[0,1]
-   	end
-end 
-
 man1 = Gpair.new("Ab")
 woman1 = Gpair.new("Ab")
 
@@ -31,11 +22,15 @@ puts man1.id
 print "Mother: "
 puts woman1.id
 
-# Male gene inheritance
-
-puts "Child 1st allele: "
-child1 = Gpair.new(man1.pair[0,1] + woman1.pair[0,1])
+# Gene inheritance
+x = ""
+flip = 1 + rand(2)
+    if flip == 2 
+       	man1.pair[1,1].to_s = x
+   	else
+       	man1.pair[0,1].to_s = x
+   	end
+put "X: #{x}"
+child1 = Gpair.new(x + woman1.pair[0,1])
+print "Child gene pair: "
 puts child1.pair
-
-puts "Test"
-puts man1.pair.swap
