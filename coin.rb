@@ -1,25 +1,19 @@
 #!/usr/bin/ruby
 # Genetic coin flip
 
-# Method 1
-puts "Type a the number of flips"
-x = gets.chomp.to_i
+class Coin
 
-=begin
-1.upto(x) do |i|
-	if rand.round == 0
-  		coin = "One"
-	else
-  		coin = "Two"
-	end
-	puts "#{i}: #{coin}"
+def self.flip
+  flip = 1 + rand(2)
+    if flip == 2 
+        puts "Two"
+    else
+        puts "One"
+    end
+end 
+
 end
-=end
 
-# Method 2
-flip = Random.new
-
-1.upto(x) do |i|
-	flip.rand(2)
-	puts "#{i}: #{flip}"
+10.times do
+  Coin.flip
 end
