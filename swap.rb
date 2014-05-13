@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 # Genetic swap
 
+# define genetic pairs
 class Gpair
 
 	attr_accessor :pair
@@ -9,6 +10,7 @@ class Gpair
 		@pair = pair
 	end
 
+	# sanity check for easy idenfitication. a bit redundant
 	def id
 		puts "Gene pair: #{pair}"
 	end
@@ -22,7 +24,7 @@ puts man1.id
 print "Mother: "
 puts woman1.id
 
-# Gene inheritance
+# Gene inheritance + make child
 x = "P"
 flip = 1 + rand(2)
     if flip == 2 
@@ -39,4 +41,4 @@ flip = 1 + rand(2)
    	end
 child1 = Gpair.new(x + y)
 print "Child gene pair: "
-puts child1.pair
+puts child1.id
