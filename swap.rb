@@ -31,7 +31,7 @@ def inherit(a,b)
     else
       y = b.pair[0,1]
     end
-    puts x + y
+    puts "#{x}#{y}"
 end
 
 man1 = Gpair.new("Ab")
@@ -42,6 +42,10 @@ puts man1.id
 print "Mother: "
 puts woman1.id
 
-print "Child: "
+print "Child1: "
 child1 = Gpair.new(inherit(man1,woman1))
-puts child1.id
+print "Child2: "
+child2 = Gpair.new(inherit(man1,woman1))
+print "Child3: "
+child2 = Gpair.new(inherit(man1,woman1))
+
