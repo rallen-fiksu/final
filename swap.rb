@@ -35,9 +35,9 @@ flip = 1 + rand(2)
 y = "P"
 flip = 1 + rand(2)
     if flip == 2 
-       	y = man1.pair[1,1]
+       	y = woman1.pair[1,1]
    	else
-       	y = man1.pair[0,1]
+       	y = woman1.pair[0,1]
    	end
 child1 = Gpair.new(x + y)
 print "Child gene pair: "
