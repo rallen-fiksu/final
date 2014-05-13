@@ -10,6 +10,24 @@ class Gpair
 		@pair = pair
 	end
 
+# method for inheriting genes.
+  def inherit(a,b)
+    x = "X"
+    y = "Y"
+    flip = 1 + rand(2)
+      if flip == 2 
+        x = a.pair[1,1]
+      else
+        x = a.pair[0,1]
+      end
+    flip = 1 + rand(2)
+      if flip == 2 
+        y = b.pair[1,1]
+      else
+        y = b.pair[0,1]
+      end
+  end
+
 	# sanity check for easy idenfitication. a bit redundant
 	def id
 		puts "Gene pair: #{pair}"
