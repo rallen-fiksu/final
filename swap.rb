@@ -10,28 +10,27 @@ class Gpair
 		@pair = pair
 	end
 
-# method for inheriting genes.
-  def inherit(a,b)
-    x = "X"
-    y = "Y"
-    flip = 1 + rand(2)
-      if flip == 2 
-        x = a.pair[1,1]
-      else
-        x = a.pair[0,1]
-      end
-    flip = 1 + rand(2)
-      if flip == 2 
-        y = b.pair[1,1]
-      else
-        y = b.pair[0,1]
-      end
-  end
-
 	# sanity check for easy idenfitication. a bit redundant
 	def id
 		puts "Gene pair: #{pair}"
 	end
+end
+
+def inherit(a,b)
+  x = "X"
+  y = "Y"
+  flip = 1 + rand(2)
+    if flip == 2 
+      x = a.pair[1,1]
+    else
+      x = a.pair[0,1]
+    end
+  flip = 1 + rand(2)
+    if flip == 2 
+      y = b.pair[1,1]
+    else
+      y = b.pair[0,1]
+    end
 end
 
 man1 = Gpair.new("Ab")
@@ -42,7 +41,18 @@ puts man1.id
 print "Mother: "
 puts woman1.id
 
+child1 = Gpair.new(inherit(man1,woman1))
+print "Child: "
+puts child1.id
+
+
+
+
+
+
+=begin
 # Gene inheritance + make child
+# This is a hard coded method. Not suitable for larger populations.
 x = "P"
 flip = 1 + rand(2)
     if flip == 2 
@@ -60,3 +70,4 @@ flip = 1 + rand(2)
 child1 = Gpair.new(x + y)
 print "Child gene pair: "
 puts child1.id
+=end
