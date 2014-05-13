@@ -49,3 +49,4 @@ child2 = Gpair.new(inherit(man1,woman1))
 print "Child3: "
 child2 = Gpair.new(inherit(man1,woman1))
 
+grandchild = Gpair.new(inherit(child1,child2))
