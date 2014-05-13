@@ -34,6 +34,6 @@ puts woman1.id
 # puts man1.pair[0,1]
 
 puts "Child 1st allele: "
-child1 = Gpair.new("Nn")
-child1.pair.sub! child1.pair[0,1], man1.pair[0,1]
-puts child1.pair[0,1]
+child1 = Gpair.new(man1.pair[0,1] + woman1.pair[0,1])
+#child1.pair.sub! child1.pair[0,1], man1.pair[0,1]
+puts child1.pair
