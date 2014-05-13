@@ -23,14 +23,14 @@ print "Mother: "
 puts woman1.id
 
 # Gene inheritance
-x = ""
+x = "P"
 flip = 1 + rand(2)
     if flip == 2 
-       	man1.pair[1,1].to_s = x
+       	x = man1.pair[1,1]
    	else
-       	man1.pair[0,1].to_s = x
+       	x = man1.pair[0,1]
    	end
-put "X: #{x}"
+puts "X: #{x}"
 child1 = Gpair.new(x + woman1.pair[0,1])
 print "Child gene pair: "
 puts child1.pair
