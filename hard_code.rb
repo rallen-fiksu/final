@@ -4,18 +4,17 @@
 # Define person class
 class Person
 	# attr_accessor is used so we can read/write :name, etc...
-	attr_accessor :name, :gender, :gene
+	attr_accessor :name, :gene
 
 	# Define biographical and genetic information
-	def initialize (name, gender, gene)
+	def initialize (name, gene)
 		@name = name
-		@gender = gender
 		@gene = gene
 	end
 
 	# Sanity check to output said information
 	def id
-		puts "Hi! My name is #{name} and I am #{gender}. My gene_gene is #{gene}."
+		puts "Hi! My name is #{name} and my gene_gene is #{gene}."
 	end
 end
 
@@ -41,20 +40,20 @@ def inherit(a="X", b="Y")
 end
 
 # Generation 1
-man_a1 = Person.new("Thorpe", "Male", "AB")
-woman_a1 = Person.new("Jain", "Female", "AB")
-man_b1 = Person.new("Rolb", "Male", "ab")
-woman_b1 = Person.new("Fess", "Female", "ab")
+man_a1 = Person.new("Thorpe", "AB")
+woman_a1 = Person.new("Jain", "AB")
+man_b1 = Person.new("Rolb", "ab")
+woman_b1 = Person.new("Fess", "ab")
 # Generation hash comes after objects are defined.
 generation1 = {:couple1 => [man_a1, woman_a1], :couple2 => [man_b1, woman_b1]}
 
 # Generation 2
-man_a2 = Person.new("Durn", "Male", (inherit man_a1, woman_a1))
-woman_a2 = Person.new("Lok", "Female", (inherit man_b1, woman_b1))
+man_a2 = Person.new("Durn", (inherit man_a1, woman_a1))
+woman_a2 = Person.new("Lok", (inherit man_b1, woman_b1))
 generation2 = {:couple1 => [man_a2, woman_a2]}
 
 # Generation 3
-man_a3 = Person.new("Wince", "Male", (inherit man_a2, woman_a2))
+man_a3 = Person.new("Wince", (inherit man_a2, woman_a2))
 generation2 = {:individual => [man_a3]}
 
 # Sanity check
