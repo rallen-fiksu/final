@@ -18,6 +18,34 @@ class Person
 	end
 end
 
+# Generation 1 Gene seeding
+def gene_seed
+	seed = rand(4)
+	if seed == 0
+		m = "A"
+	elsif seed == 1
+		m = "B"
+	elsif seed == 2
+		m = "a"
+	else
+		m = "b"
+	end
+
+	seed = rand(4)
+	if seed == 0
+		n = "A"
+	elsif seed == 1
+		n = "B"
+	elsif seed == 2
+		n = "a"
+	else
+		n = "b"
+	end
+
+	puts "#{m}#{n}"
+  	return "#{m}#{n}"
+end
+
 # Specify inherit with the parents of the child
 # Ex: inherit(parent1, parent2)
 def inherit(a="X", b="Y")
@@ -40,7 +68,7 @@ def inherit(a="X", b="Y")
 end
 
 # Generation 1
-man_a1 = Person.new("Thorpe", "AB")
+man_a1 = Person.new("Thorpe", gene_seed)
 woman_a1 = Person.new("Jain", "AB")
 man_b1 = Person.new("Rolb", "ab")
 woman_b1 = Person.new("Fess", "ab")
