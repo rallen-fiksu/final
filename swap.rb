@@ -31,7 +31,8 @@ def inherit(a="X", b="Y")
     else
       y = b.pair[0,1]
     end
-  puts x + y
+  puts "#{x}#{y}"
+  return "#{x}#{y}"
 end
 
 man1 = Gpair.new("Ab")
