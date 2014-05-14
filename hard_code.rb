@@ -19,6 +19,8 @@ class Person
 	end
 end
 
+# Specify inherit with the parents of the child
+# Ex: inherit(parent1, parent2)
 def inherit(a="X", b="Y")
   x = "X"
   y = "Y"
@@ -39,19 +41,16 @@ def inherit(a="X", b="Y")
 end
 
 # Generation 1
-man_a1 = Person.new("Thorpe", "Male", "AA")
-woman_a1 = Person.new("Jain", "Female", "BB")
-man_b1 = Person.new("Rolb", "Male", "aa")
-woman_b1 = Person.new("Fess", "Female", "bb")
+man_a1 = Person.new("Thorpe", "Male", "AB")
+woman_a1 = Person.new("Jain", "Female", "AB")
+man_b1 = Person.new("Rolb", "Male", "ab")
+woman_b1 = Person.new("Fess", "Female", "ab")
 # Generation hash comes after objects are defined.
 generation1 = {:couple1 => [man_a1, woman_a1], :couple2 => [man_b1, woman_b1]}
 
-# Makin babies
-
-
 # Generation 2
 man_a2 = Person.new("Durn", "Male", (inherit man_a1, woman_a1))
-woman_a2 = Person.new("Lok", "Female", (inherit man_a1, woman_a1))
+woman_a2 = Person.new("Lok", "Female", (inherit man_b1, woman_b1))
 generation2 = {:couple1 => [man_a2, woman_a2]}
 
 # Generation 3
