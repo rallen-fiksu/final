@@ -16,7 +16,7 @@ class Gpair
 	end
 end
 
-def inherit(a,b)
+def inherit(a, b)
   x = "X"
   y = "Y"
   flip = 1 + rand(2)
@@ -31,7 +31,7 @@ def inherit(a,b)
     else
       y = b.pair[0,1]
     end
-    puts "#{x}#{y}"
+  puts x + y
 end
 
 man1 = Gpair.new("Ab")
@@ -49,4 +49,5 @@ child2 = Gpair.new(inherit(man1,woman1))
 print "Child3: "
 child2 = Gpair.new(inherit(man1,woman1))
 
+print "Grandchild: "
 grandchild = Gpair.new(inherit(child1,child2))
