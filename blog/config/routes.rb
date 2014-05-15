@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
 Blog::Application.routes.draw do
  
-  resources :articles
+ resources :articles do
+  resources :comments
  
   root 'welcome#index'
 end
