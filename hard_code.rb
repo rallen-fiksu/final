@@ -67,11 +67,35 @@ def inherit(a="X", b="Y")
   return "#{x}#{y}"
 end
 
+def expression(a)
+	if a == "AA"
+		puts "Black Hair"
+	elsif a == "AB" or a == "BA"
+		puts "Black Hair"
+	elsif a == "BB"
+		puts "Brown Hair"
+	elsif a == "Aa" or a == "aA"
+		puts "Black Hair"
+	elsif a == "Ba" or a == "aB"
+		puts "Brown Hair"
+	elsif a == "Ab" or a == "bA"
+		puts "Black Hair"
+	elsif a == "Bb" or a == "bB"
+		puts "Brown Hair"
+	elsif a == "aa"
+		puts "White Hair"
+	else a == "bb"
+		puts "Blond Hair"
+	end
+	puts "Hair color: #{a}."
+end
+		
+
 # Generation 1
 man_a1 = Person.new("Thorpe", gene_seed)
-woman_a1 = Person.new("Jain", "AB")
-man_b1 = Person.new("Rolb", "ab")
-woman_b1 = Person.new("Fess", "ab")
+woman_a1 = Person.new("Jain", gene_seed)
+man_b1 = Person.new("Rolb", gene_seed)
+woman_b1 = Person.new("Fess", gene_seed)
 # Generation hash comes after objects are defined.
 generation1 = {:couple1 => [man_a1, woman_a1], :couple2 => [man_b1, woman_b1]}
 
