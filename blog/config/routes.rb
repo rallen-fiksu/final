@@ -6,12 +6,13 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
+root 'welcome#index'
+
 Blog::Application.routes.draw do
  
- resources :articles do
-  resources :comments
- 
-  root 'welcome#index'
+  resources :articles do
+    resources :comments
+  end
 end
 
   # Example of regular route:
