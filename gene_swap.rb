@@ -36,13 +36,17 @@ class Person
 
 end
 
+def mbaby (arg1 = "#{man1}", arg2 = "#{woman1}")
+	"#{arg1}, #{arg2}"
+end
+
 # Super helpful link on Class Objects: http://patshaughnessy.net/2012/7/26/objects-classes-and-modules
 
 # Sanity check
 man1 = Person.new("Thorpe", "Male", 1)
 woman1 = Person.new("Jain", "Female", 1)
-man2 = Person.new("Thorpe", "Male", 1)
-woman2 = Person.new("Jain", "Female", 1)
+man2 = Person.new("Rolb", "Male", 1)
+woman2 = Person.new("Fess", "Female", 1)
 # child = Person.new("Bick", "Male", man.number.to_i + woman.number.to_i)
 # puts "Child number is #{child.number}."
 puts "***"
@@ -52,8 +56,12 @@ generation1 = {:couple1 => [man1, woman1], :couple2 => [man2, woman2]}
 
 puts "Generation 1:"
 generation1.each { |a| puts a }
-
 puts "---"
-# Make Babies!
+
+# Make Babies
+puts mbaby
+
+
+
 # child = Person.new("Dimmy", "Male", man1.number.to_i + woman1.number.to_i)
 # puts child.id

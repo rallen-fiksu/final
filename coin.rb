@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# Genetic coin flip
+# Coin flip
 
 class Coin
 
